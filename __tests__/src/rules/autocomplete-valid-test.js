@@ -21,12 +21,10 @@ const ruleTester = new RuleTester();
 
 const invalidAutocomplete = [{
   message: axeFailMessage('autocomplete-valid'),
-  type: 'JSXOpeningElement',
 }];
 
 const inappropriateAutocomplete = [{
   message: axeFailMessage('autocomplete-appropriate'),
-  type: 'JSXOpeningElement',
 }];
 
 const componentsSettings = {

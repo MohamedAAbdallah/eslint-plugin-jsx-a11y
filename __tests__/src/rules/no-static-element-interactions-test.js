@@ -24,7 +24,6 @@ const errorMessage = 'Avoid non-native interactive elements. If using native HTM
 
 const expectedError = {
   message: errorMessage,
-  type: 'JSXOpeningElement',
 };
 
 const ruleName = 'no-static-element-interactions';
