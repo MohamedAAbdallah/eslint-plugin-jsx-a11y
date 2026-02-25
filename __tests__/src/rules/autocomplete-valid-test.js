@@ -23,10 +23,6 @@ const invalidAutocomplete = [{
   message: axeFailMessage('autocomplete-valid'),
 }];
 
-const inappropriateAutocomplete = [{
-  message: axeFailMessage('autocomplete-appropriate'),
-}];
-
 const componentsSettings = {
   'jsx-a11y': {
     components: {
@@ -58,10 +54,10 @@ ruleTester.run('autocomplete-valid', rule, {
 
     // PASSED "autocomplete-appropriate"
     // see also: https://github.com/dequelabs/axe-core/issues/2912
-    { code: '<input type="date" autocomplete="email" />;', errors: inappropriateAutocomplete },
-    { code: '<input type="number" autocomplete="url" />;', errors: inappropriateAutocomplete },
-    { code: '<input type="month" autocomplete="tel" />;', errors: inappropriateAutocomplete },
-    { code: '<Foo type="month" autocomplete="tel"></Foo>;', errors: inappropriateAutocomplete, options: [{ inputComponents: ['Foo'] }] },
+    { code: '<input type="date" autocomplete="email" />;' },
+    { code: '<input type="number" autocomplete="url" />;' },
+    { code: '<input type="month" autocomplete="tel" />;' },
+    { code: '<Foo type="month" autocomplete="tel"></Foo>;', options: [{ inputComponents: ['Foo'] }] },
   )).map(parserOptionsMapper),
   invalid: parsers.all([].concat(
     // FAILED "autocomplete-valid"
