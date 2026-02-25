@@ -66,8 +66,6 @@ jobs:
             eslint: 10
           - node-version: 4
             eslint: 10
-          - node-version: 25
-            eslint: 10
           - node-version: 16
             eslint: 9
           - node-version: 15
